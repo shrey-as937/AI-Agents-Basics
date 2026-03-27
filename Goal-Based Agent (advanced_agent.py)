@@ -1,0 +1,27 @@
+# Goal-Based AI Agent
+
+class GoalBasedAgent:
+    def __init__(self, goal):
+        self.goal = goal
+
+    def decide(self, state):
+        """
+        Decide action based on goal + current state
+        """
+        if self.goal == "stay healthy":
+            if state == "hungry":
+                return "Eat healthy food"
+            elif state == "tired":
+                return "Take rest"
+        return "Maintain routine"
+
+
+# Run program
+if __name__ == "__main__":
+    agent = GoalBasedAgent("stay healthy")
+    
+    state = input("Enter current state: ").lower()
+    
+    action = agent.decide(state)
+    
+    print("Agent Decision:", action)
