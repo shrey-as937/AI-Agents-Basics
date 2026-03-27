@@ -1,0 +1,26 @@
+# Simple AI Agent (Reflex Agent)
+
+def simple_agent(percept):
+    """
+    This agent takes input (percept)
+    and returns an action based on condition.
+    """
+    if percept == "hungry":
+        return "Eat food"
+    elif percept == "tired":
+        return "Sleep"
+    elif percept == "bored":
+        return "Watch movie"
+    else:
+        return "Do nothing"
+
+
+# Main execution
+if __name__ == "__main__":
+    print("AI Agent is running...")
+    
+    user_input = input("Enter your state (hungry/tired/bored): ").lower()
+    
+    action = simple_agent(user_input)
+    
+    print("Agent Action:", action)
